@@ -1,0 +1,14 @@
+{
+    "plugins": ["@astrojs/tailwind"],
+    "overrides": [
+      {
+        "files": ["*.astro", "*.md"],
+        "options": {
+          "parser": "@astrojs/parser",
+          "pluginSearchDirs": ["."],
+          "plugins": ["@astrojs/tailwind"]
+        }
+      }
+    ]
+  }
+  

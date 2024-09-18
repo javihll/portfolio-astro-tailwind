@@ -1,0 +1,21 @@
+---
+const { skill, percentage } = Astro.props;
+---
+
+<div class="relative w-40 h-40">
+    <svg viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" fill="none" stroke="#ddd" 'strokeWidth'="10"></circle>
+        <circle cx="50" cy="50" r="45" fill="none" stroke="#3498db" 'strokeWidth'="10" style={`stroke-dasharray: ${percentage}, 314;`}></circle>
+    </svg>
+    <div class="absolute inset-0 flex items-center justify-center">
+        <span class="text-xl font-bold">{skill}</span>
+    </div>
+</div>
+
+<style>
+    circle:nth-child(2) {
+        transform-origin: center;
+        transform: rotate(-90deg);
+        transition: stroke-dasharray 0.5s ease-out;
+    }
+</style>

@@ -1,0 +1,19 @@
+---
+import { useEffect, useRef } from 'react';
+const observerOptions = {
+    rootMargin: '-20%',
+};
+---
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    const elements = document.querySelectorAll('.reveal-from-left, .reveal-from-right');
+    elements.forEach(el => observer.observe(el));
+</script>

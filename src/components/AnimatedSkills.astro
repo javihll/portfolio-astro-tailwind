@@ -1,0 +1,23 @@
+---
+import { useEffect, useState } from 'react';
+const { skills = '' } = Astro.props;
+---
+
+<div class="text-xl font-semibold mb-4">
+    Habilidades principales:
+    <span class="ml-2 text-purple-300 animate-text-loop">{skills}</span>
+</div>
+
+<style>
+    @keyframes textLoop {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+
+    .animate-text-loop {
+        display: inline-block;
+        white-space: nowrap;
+        animation: textLoop 10s linear infinite;
+        padding-right: 200px;
+    }
+</style>

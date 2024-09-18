@@ -1,0 +1,18 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+---
+
+<section id="projects" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-8">Mis proyectos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+                { title: 'Proyecto 1', description: 'Descripción del proyecto 1', image: '/path/to/image1.jpg' },
+                { title: 'Proyecto 2', description: 'Descripción del proyecto 2', image: '/path/to/image2.jpg' },
+                { title: 'Proyecto 3', description: 'Descripción del proyecto 3', image: '/path/to/image3.jpg' },
+            ].map((project) => (
+                <ProjectCard {...project} />
+            ))}
+        </div>
+    </div>
+</section>
