@@ -1,5 +1,10 @@
 ---
 // Si necesitas algún front matter, colócalo aquí
+// Por ejemplo:
+// interface Props {
+//   email: string;
+// }
+// const { email } = Astro.props;
 ---
 
 <button id="sendMessageButton" class="fixed bottom-8 right-8 bg-purple-500 text-white px-6 py-3 rounded-full hover:bg-purple-600 transition-colors duration-300 z-50">
@@ -20,3 +25,7 @@
         console.error("El botón de enviar mensaje no se encontró en el DOM.");
     }
 </script>
+
+<style>
+  /* Aquí puedes agregar estilos específicos para este componente si es necesario */
+</style>
